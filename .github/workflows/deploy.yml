@@ -37,6 +37,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pip install --upgrade pip==23.0.1
           pip install -r ./django_api_financial/requirements.txt
 
       - name: Build and run Docker containers
