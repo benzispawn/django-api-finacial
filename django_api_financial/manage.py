@@ -9,8 +9,8 @@ def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_api_financial.settings')
     load_dotenv()  # Load environment variables from .env
-    for key, value in os.environ.items():
-        print(f"{key}: {value}")
+    # for key, value in os.environ.items():
+    #     print(f"{key}: {value}")
 
     try:
         from django.core.management import execute_from_command_line
