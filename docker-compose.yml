@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "${PORT:-8000}:8000"
     env_file:   # This points to the .env file in your project
       - ./django_api_financial/.env
     environment:

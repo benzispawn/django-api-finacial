@@ -19,7 +19,7 @@ def main():
         ) from exc
     if len(sys.argv) > 1 and sys.argv[1] == 'runserver':
         # Get the port from environment or use default '8200'
-        port = os.getenv('DJANGO_PORT', '8200')
+        port = os.getenv('PORT', '8200')
         print(port)
         print(sys.argv)
         if len(sys.argv) == 2:  # If no port is provided, append the port
