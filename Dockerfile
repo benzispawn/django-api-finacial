@@ -17,10 +17,10 @@ COPY . .
 # Set environment variables
 ENV DJANGO_SETTINGS_MODULE=django_api_financial.settings
 ENV PYTHONUNBUFFERED=1
-ENV PORT=8200
+#ENV PORT=8200
 
 # Expose the port
-EXPOSE $PORT
+EXPOSE 8000
 
 # Run the Django application
-CMD ["python", "django_api_financial/manage.py", "runserver", "0.0.0.0:$PORT"]
+CMD ["python", "django_api_financial/manage.py", "runserver", "0.0.0.0:8000"]

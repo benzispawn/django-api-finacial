@@ -6,12 +6,12 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "${PORT:-8200}:8200"
+      - "8000:8200"
     env_file:   # This points to the .env file in your project
       - ./django_api_financial/.env
     environment:
       - DJANGO_SETTINGS_MODULE=django_api_financial.settings
-      - PORT=8200
+      - PORT=8000
     volumes:
       - .:/app
-    command: python django_api_financial/manage.py runserver 0.0.0.0:$PORT
+    command: python django_api_financial/manage.py runserver 0.0.0.0:8000
