@@ -41,16 +41,16 @@ jobs:
           pip install -r ./django_api_financial/requirements.txt
 
       - name: Build and run Docker containers
-        run: docker-compose up --build -d
+        run: docker compose up --build -d
 
       - name: Run Make Migrations
-        run: docker-compose exec django python django_api_financial/manage.py makemigrations
+        run: docker compose exec django python django_api_financial/manage.py makemigrations
 
       - name: Run Migrations
-        run: docker-compose exec django python django_api_financial/manage.py migrate
+        run: docker compose exec django python django_api_financial/manage.py migrate
 
       - name: Run Tests
-        run: docker-compose exec django python django_api_financial/manage.py test
+        run: docker compose exec django python django_api_financial/manage.py test
 
       - name: Stop Docker containers
-        run: docker-compose down
+        run: docker compose down
