@@ -31,7 +31,6 @@ jobs:
           echo DB_HOST=${{ secrets.DB_HOST }} >> ./django_api_financial/.env
           echo ALPHAVANTAGE_API_KEY=${{ secrets.ALPHAVANTAGE_API_KEY }} >> ./django_api_financial/.env
           echo ALPHAVANTAGE_API_URL=${{ secrets.ALPHAVANTAGE_API_URL }} >> ./django_api_financial/.env
-          echo DATABASE_URL=${{ secrets.DATABASE_URL }} >> ./django_api_financial/.env
 
       - name: Set up Docker
         uses: docker/setup-buildx-action@v2
