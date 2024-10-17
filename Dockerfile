@@ -25,4 +25,4 @@ EXPOSE 8000
 # Run the Django application
 #CMD ["python", "django_api_financial/manage.py", "runserver", "0.0.0.0:8000"]
 #CMD ["sh", "-c", "python django_api_financial/manage.py runserver 127.0.0.1:8000"]
-CMD ["gunicorn", "django_api_financial.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "2", "--threads", "1", "--timeout", "120"]
+CMD ["gunicorn", "django_api_financial.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "1", "--threads", "1", "--timeout", "120"]
