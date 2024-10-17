@@ -22,6 +22,7 @@ ENV PYTHONUNBUFFERED=1
 # Expose the port
 EXPOSE 8000
 
+ENV PYTHONPATH=/app/django_api_financial
 # Run the Django application
 #CMD ["python", "django_api_financial/manage.py", "runserver", "0.0.0.0:8000"]
 #CMD ["sh", "-c", "python django_api_financial/manage.py runserver 127.0.0.1:8000"]

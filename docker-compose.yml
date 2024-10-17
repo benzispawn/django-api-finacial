@@ -11,7 +11,7 @@ services:
       - ./django_api_financial/.env
     environment:
       - DJANGO_SETTINGS_MODULE=django_api_financial.settings
-      - PORT=8000
+      - PORT=8200
     volumes:
       - .:/app
 #    command: python django_api_financial/manage.py runserver 127.0.0.1:8000
