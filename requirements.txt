@@ -3,6 +3,7 @@ pyyaml
 chardet
 requests-toolbelt
 uvicorn>=0.12.0,<0.13.3
+gunicorn
 aiofiles==23.1.0
 aniso8601==7.0.0
 apispec==6.0.2
