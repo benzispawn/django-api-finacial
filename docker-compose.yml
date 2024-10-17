@@ -10,7 +10,8 @@ services:
     env_file:   # This points to the .env file in your project
       - ./django_api_financial/.env
     environment:
-      DJANGO_SETTINGS_MODULE: django_api_financial.settings
+      - DJANGO_SETTINGS_MODULE=django_api_financial.settings
+      - PORT=${PORT:-8200}
     volumes:
       - .:/app
-    command: python django_api_financial/manage.py runserver 0.0.0.0:8200
+    command: python django_api_financial/manage.py runserver 0.0.0.0:$PORT
