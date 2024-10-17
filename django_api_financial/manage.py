@@ -28,7 +28,7 @@ def main():
         if len(sys.argv) == 2:  # If no port is provided, append the port
             sys.argv.append(port)
         elif len(sys.argv) == 3:  # If only the address is provided, append the port
-            sys.argv[2] = f"0.0.0.0:{port}"
+            sys.argv[2] = f"127.0.0.1:{port}"
 
     execute_from_command_line(sys.argv)
 
